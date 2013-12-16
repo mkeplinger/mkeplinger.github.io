@@ -197,6 +197,11 @@ p, pre {
 	margin: 0px 0px 20px;
 }
 
+pre {
+	background: #f3f3f3;
+	padding: 15px;
+}
+
 .half{
 	width: 50%;
 	float: left;
@@ -1107,8 +1112,8 @@ a.delete{
 	}
 	
 		.quick-left ul{
-			margin: 0px;
-			padding: 20px 0px 20px;
+			margin: 0px 0px 20px 0px;
+			padding: 20px 0px 20px 0px;
 			border-bottom: solid 1px #e5e5e5;
 		}
 		
