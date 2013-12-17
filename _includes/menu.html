@@ -1,0 +1,18 @@
+{% comment %} <-- everything between these tags will not be rendered in HTML
+The layout for this menu, is to 
+{% endcomment %}
+<ul>
+	<li><a href="/" class="{% if page.url == '/index.html'%}current{% endif %}">PushCommerce Overview</a></li>
+</ul>
+<h2>Getting Started</h2>
+<ul>
+	<li><a href="/getting-started/installing" class="{% if page.url == '/getting-started/installing/index.html'%}current{% endif %}">Installing PushCommerce</a></li>
+	<li><a href="/getting-started/deployment-planning" class="{% if page.url == '/getting-started/deployment-planning/index.html'%}current{% endif %}">Planning for Deployment</a></li> 
+</ul>
+
+<h2>Template Tags</h2>
+<ul>
+	<li><a href="/template-tags/collections" class="{% if page.url == '/template-tags/collections/index.html'%}current{% endif %}">Collections</a></li>
+	<li><a href="/template-tags/products" class="{% if page.url == '/template-tags/products/index.html'%}current{% endif %}">Products</a></li>
+	<li><a href="/template-tags/looping" class="{% if page.url == '/template-tags/looping/index.html'%}current{% endif %}">Looping Through Products</a></li> 
+</ul>
