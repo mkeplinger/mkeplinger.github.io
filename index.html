@@ -1,32 +1,51 @@
 ---
 layout: default
-title: Overview of Push Commerce App
-description: This test will go into the meta description
-tags: 
+title: Overview of PushCommerce App
+description: PushCommerce extends Shopify out onto any web medium easily.  Manage your store in Shopify and push the content onto your webpage, your wordpress or drupal site, or even your facebook page easily.
 published: true
 ---
 
-# OVERVIEW
+# What is PushCommerce?
 
-1. one
-1. two
-1. three
+PushCommerce solves the need to break free from the limiting confines of Shopify template engine.  It allows you to drop in a quick code snippet and then have access to all of your data from shopify.  This allows you to create offers to sell your products outside of Shopify, on Facebook, or host your entire ecommerce storefront in any website application, like Wordpress, Drupal, Joomla! or MODx easily.
 
-Wave sensational bonus pop-top creamy opportunity compare. Tough clean revolutionary natural blast lasting neat splash new perfect duty are. Look yourself duty **jiffy** too.
-Desire generous spring lost sparkling can't affordable very chunky hit traditional. Mouthwatering worthwhile cause neat out fights while lifetime longer less find. Delivers fun sensible never compact lasting rare tighter made premium.</p>
+The easy to follow and understand templating language allows you to get the data onto your HTML pages easily.
+
+
+## Example Deployment
+
+#### Step 1.  Drop supplied code into the footer of your site.
 
 ```html
-<div class="quickstart-button-wrapper text-right">
-    <a href="#" class="btn-orange done">Done</a>
-    <a href="#" class="btn-black delete">Cancel</a> 
-</div>
+<script src='//yourstore.pushcommerceapp.com/initialize.js'></script>
 ```
-							
-<p>Good herbal most want tempt splash gentle zippy whiter many generous included.</p>
 
-<textarea class="blk"></textarea>
+#### Step 2.  On each page you want to grab Shopify data, call the data inline with this simple call.  
+__The example below will call the "frontpage" collection data from Shopify, which includes data about each of the products in that collection.__
 
-<div class="quickstart-button-wrapper text-right">
-    <a href="#" class="btn-orange done">Done</a>
-    <a href="#" class="btn-black delete">Cancel</a> 
-</div>
+```html
+<script type="text/x-shopify-connector-template" data-src="/api/v1/collection/frontpage/">
+```
+
+#### Step 3.  Use our supplied template language to add dynamic Shopify content on the page.  
+__The call to the API and the template codes are all wrapped in one `<script type="text/x-shopify-connector-template">` tag.  Note the type of text/x-shopify-connector-template.  That is how the app knows where to insert the dynamic content.__
+
+```html
+<script type="text/x-shopify-connector-template" data-src="/api/v1/collection/frontpage/">
+	{{#foreach products}}
+		<li data-target="#myCarousel" data-slide-to="{{ $index }}" class="{{#if $first}}active{{/if}}"></li>
+    {{/foreach}}
+</script>
+```
+
+## Ease of Use with Helper Functions
+
+PushCommerce has tons of built-in helpers and calls to make it easy to show your data and sell your Shopify products on any web medium outside of shopify.
+
+Here are a list of some of the more popular helper functions you can use.
+1. Resize images on the fly.
+2. Convert dollars to some other currency.
+3. Grab the first 20 words of your description.
+
+
+More to come....
