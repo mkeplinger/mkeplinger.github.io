@@ -178,19 +178,24 @@ h1, h2, h3, h4, h5, h6{
 	font-family: 'oswaldregular';
 	font-weight: normal;
 	color: #000000;
+}
+
+h1, h2{
 	text-transform: uppercase;
+}
+
+h3, h4, h5{
+		margin: 0px 0px 20px;
 }
 
 h4{
 	font-size: 18px;
 	color: #333333;
-	margin: 0px 0px 20px;
 }
 
 h5{
 	font-size: 16px;
 	color: #333333;
-	margin: 0px 0px 20px;
 }
 
 p, pre {
@@ -271,7 +276,7 @@ pre {
    ========================================================================== */
 .wrap{
 	width: 1200px;
-	margin:0 auto;
+	margin:0px  auto auto 10px;
 }
 
 .grey{
@@ -1101,11 +1106,10 @@ a.delete{
 		font-size: 18px;
 		font-weight: normal;
 		color: #000000;
-		margin: 0px;
 	}
 	
 	.quick-left{
-		width: 420px;
+		width: 270px;
 		float: left;
 		margin-right: 80px;
 		padding: 24px 0px;
@@ -1113,7 +1117,7 @@ a.delete{
 	
 		.quick-left ul{
 			margin: 0px 0px 20px 0px;
-			padding: 20px 0px 20px 0px;
+			padding: 10px 0px 20px 0px;
 			border-bottom: solid 1px #e5e5e5;
 		}
 		
@@ -1141,9 +1145,13 @@ a.delete{
 		}
 			
 	.quick-right{
-		width: 670px;
+		width: 770px;
 		float: left;
 		padding: 24px 0px;
+	}
+	
+	.quick-right h2{
+		padding: 20px 0px 10px 0px;
 	}
 	
 	textarea.blk{
@@ -1570,6 +1578,56 @@ ul.details li{
    Modify as content requires.
    ========================================================================== */
 
+@media (min-width: 2000px){
+	.wrap{
+		width: 1960px;
+	}
+	
+	.quick-right {
+		width: 73%;
+		float: left;
+		padding: 24px 0px;
+	}
+}
+
+@media (min-width: 1800px) and (max-width: 1999px){
+	.wrap{
+		width: 1760px;
+	}
+	
+	.quick-right {
+		width: 73%;
+		float: left;
+		padding: 24px 0px;
+	}
+}
+
+@media (min-width: 1600px) and (max-width: 1799px){
+	.wrap{
+		width: 1560px;
+	}
+	
+	.quick-right {
+		width: 73%;
+		float: left;
+		padding: 24px 0px;
+	}
+}
+
+
+@media (min-width: 1440px) and (max-width: 1599px){
+	.wrap{
+		width: 1400px;
+	}
+	
+	.quick-right {
+		width: 73%;
+		float: left;
+		padding: 24px 0px;
+	}
+	
+}
+
 @media (max-width: 1200px){
 
 	.wrap{
@@ -1669,7 +1727,7 @@ ul.details li{
 	}
 	
 	.quick-left {
-		width: 36%;
+		width: 23.2%;
 		float: left;
 		margin-right: 6%;
 		padding: 24px 0px;
@@ -1769,6 +1827,10 @@ ul.details li{
 
 
 @media (max-width: 767px){
+	
+	.wrap {
+		margin-left: 0px;
+	}
 	
 	.head-left {
 		width: 100%;
