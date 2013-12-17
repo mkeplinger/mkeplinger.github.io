@@ -28,13 +28,17 @@ __The example below will call the "frontpage" collection data from Shopify, whic
 ```
 
 #### Step 3.  Use our supplied template language to add dynamic Shopify content on the page.  
-__The call to the API and the template codes are all wrapped in one `<script type="text/x-shopify-connector-template">` tag.  Note the type of text/x-shopify-connector-template.  That is how the app knows where to insert the dynamic content.__
+__The call to the API and the template codes are all wrapped in one `<script type="text/x-shopify-connector-template">` tag.  Note the type of text/x-shopify-connector-template.  That is how the app knows where to insert the dynamic content.  
+Everything in the `{{ }}` curly braces is content from Shopify.__
 
 ```html
 <script type="text/x-shopify-connector-template" data-src="/api/v1/collection/frontpage/">
-	{{#foreach products}}
-		<li data-target="#myCarousel" data-slide-to="{{ $index }}" class="{{#if $first}}active{{/if}}"></li>
-    {{/foreach}}
+	<img class="img-circle" src="{{image}}" width="193px" height="185px">
+	<h2>{{title}}</h2>
+	<div class="collection-body">
+		{{{nohtml body_html 30}}} // strips out HTML and show the first 30 characters
+	</div>
+	<p><a class="btn btn-default" href="/product/{{name}}">View details</a></p>
 </script>
 ```
 
