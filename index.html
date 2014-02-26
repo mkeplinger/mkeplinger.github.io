@@ -17,14 +17,14 @@ The easy to follow and understand templating language allows you to get the data
 #### Step 1.  Drop supplied code into the footer of your site.
 
 ```html
-<script src='//yourstore.pushcommerceapp.com/initialize.js?v=20903'></script>
+<script src='//yourstore.pushcommerceapp.com/push-yourstore.js?v=20903'></script>
 ```
 
 #### Step 2.  On each page you want to grab Shopify data, call the data inline with this simple call.  
 __The example below will call the "frontpage" collection data from Shopify, which includes data about each of the products in that collection.__
 
 ```html
-<script type="text/x-shopify-connector-template" data-src="/api/v1/collection/frontpage/">
+<script type="text/x-pushcommerce-tmpl" data-src="/api/v1/collection/frontpage/">
 ```
 
 #### Step 3.  Use our supplied template language to add dynamic Shopify content on the page.  
@@ -32,7 +32,7 @@ __The call to the API and the template codes are all wrapped in one `<script typ
 Everything in the `{{ }}` curly braces is content from Shopify.__
 
 ```html
-<script type="text/x-shopify-connector-template" data-src="/api/v1/collection/frontpage/">
+<script type="text/x-pushcommerce-tmpl" data-src="/api/v1/collection/frontpage/">
 	<img class="img-circle" src="{{image}}" width="193px" height="185px">
 	<h2>{{title}}</h2>
 	<div class="collection-body">
